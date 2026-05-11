@@ -31,22 +31,22 @@ decomposition = seasonal_decompose(
 plt.figure(figsize=(10, 12))
 
 plt.subplot(4, 1, 1)
-plt.plot(data['money'], label='Monthly sales')
+plt.plot(data['money'].head(150), label='Monthly sales')
 plt.legend(loc='upper left')
 plt.title('Monthly sales')
 
 plt.subplot(4, 1, 2)
-plt.plot(decomposition.trend, label='Trend', color='orange')
+plt.plot(decomposition.trend.head(150), label='Trend', color='orange')
 plt.legend(loc='upper left')
 plt.title('Linear Trend Plot')
 
 plt.subplot(4, 1, 3)
-plt.plot(decomposition.seasonal, label='Seasonal', color='green')
+plt.plot(decomposition.seasonal.head(150), label='Seasonal', color='green')
 plt.legend(loc='upper left')
 plt.title('Seasonality Plot')
 
 plt.subplot(4, 1, 4)
-plt.plot(decomposition.resid, label='Residual', color='red')
+plt.plot(decomposition.resid.head(150), label='Residual', color='red')
 plt.legend(loc='upper left')
 plt.title('Residual Plot')
 
@@ -55,16 +55,20 @@ plt.show()
 ```
 ### OUTPUT:
 ORIGINAL TIME SERIES DATA:
-<img width="543" height="146" alt="image" src="https://github.com/user-attachments/assets/1ffa127a-e700-4784-8862-23461fa6fbc1" />
+<img width="543" height="146" alt="image" src="https://github.com/user-attachments/assets/6fdc04fd-268b-47cc-bb08-3c5214d1f8c1" />
+
 
 LINEAR TREND PLOT:
-<img width="543" height="146" alt="image" src="https://github.com/user-attachments/assets/be5ab9ff-7cf1-49c6-b2a9-fd372a2ca38e" />
+<img width="543" height="146" alt="image" src="https://github.com/user-attachments/assets/9a58dccf-18f9-4ad2-9893-5d7a37dc4c63" />
+
 
 SEASONALITY PLOT:
-<img width="547" height="146" alt="image" src="https://github.com/user-attachments/assets/bfc61579-d6f1-4339-9f9a-b5cf88860b97" />
+<img width="547" height="146" alt="image" src="https://github.com/user-attachments/assets/3315d52f-8517-4364-843b-b99f2674ef6b" />
+
 
 RESIDUAL PLOT:
-<img width="554" height="146" alt="image" src="https://github.com/user-attachments/assets/646c8734-28d3-48d6-98cb-51d0c5427972" />
+<img width="554" height="146" alt="image" src="https://github.com/user-attachments/assets/0aebbb87-36ca-44bf-b340-e167a4f86b18" />
+
 
 ### RESULT:
 Thus we have created the python code for the time series analysis and decomposition.
