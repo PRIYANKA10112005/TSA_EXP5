@@ -12,7 +12,7 @@ To Illustrates how to perform time series analysis and decomposition on the mont
 5. Display the overall results.
 
 ### PROGRAM:
-
+```PY
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -52,7 +52,7 @@ plt.title('Residual Plot')
 
 plt.tight_layout()
 plt.show()
-
+```
 ### OUTPUT:
 ORIGINAL TIME SERIES DATA:
 <img width="543" height="146" alt="image" src="https://github.com/user-attachments/assets/1ffa127a-e700-4784-8862-23461fa6fbc1" />
